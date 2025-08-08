@@ -11,6 +11,16 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Shift Alpha WebGL.json", {onProgress: UnityProgress});
     </script>
+    <style>
+    /* Lock aspect ratio while scaling */
+    #unityContainer {
+        width: 100vw;
+        height: calc(100vw * (16 / 9)); /* Keeps 16:9 ratio */
+        max-height: 100vh;
+        margin: auto;
+        background: black; /* optional: fills letterbox space */
+    }
+    </style>
   </head>
   <body>
     <div class="webgl-content">
